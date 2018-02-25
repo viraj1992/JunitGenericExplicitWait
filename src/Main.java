@@ -32,6 +32,7 @@ public class Main {
 		driver.findElement(By.linkText("Login")).click();
 		WebElement email = wt.waitforElement(By.id("user_email"), 3);
 		email.sendKeys("admin@mailinator.com");
+		wt.clickWhenReady(By.name("commit"), 3);
 	}
 
 	@After
